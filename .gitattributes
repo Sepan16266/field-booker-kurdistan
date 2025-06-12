@@ -1,0 +1,24 @@
+# Git attributes for Field Booker Kurdistan
+
+# Prevent sensitive files from being tracked
+*service-account*.json filter=git-crypt diff=git-crypt
+*credentials*.json filter=git-crypt diff=git-crypt
+attached_assets/*.txt filter=git-crypt diff=git-crypt
+
+# Text files should be normalized
+*.md text
+*.txt text
+*.json text
+*.js text
+*.ts text
+*.tsx text
+*.css text
+*.html text
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary

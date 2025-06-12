@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: field-booker-kurdistan
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install && cd client && npm install && npm run build && cd .. && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    # Auto-deploy from GitHub
+    autoDeploy: true
